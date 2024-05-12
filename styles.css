@@ -1,19 +1,32 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, p, ul {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Style the header */
-header {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
+.container {
+    width: 80%;
+    margin: auto;
 }
 
-/* Style the navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -22,26 +35,62 @@ nav ul li {
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Golden yellow */
+}
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
     color: #333;
 }
 
-/* Style sections */
-section {
-    padding: 40px;
+section p {
+    color: #555;
 }
 
-/* Style the footer */
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    position: relative;
+    margin-top: 100px; /* Space for content above footer */
 }
 
-/* Style products */
-.product {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
 }
